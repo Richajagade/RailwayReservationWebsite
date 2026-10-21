@@ -1,0 +1,44 @@
+* { box-sizing: border-box; }
+:root { --navy: #102a43; --blue: #1769aa; --teal: #16a6a1; --ink: #203247; --muted: #68788a; --paper: #f4f8fb; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Inter, "Segoe UI", Arial, sans-serif; background: var(--paper); color: var(--ink); }
+.site-header { display: flex; justify-content: space-between; align-items: center; padding: 18px clamp(20px, 6vw, 84px); background: white; border-bottom: 1px solid #e2eaf1; }
+.brand { display: flex; align-items: center; gap: 10px; font-size: 1.25rem; font-weight: 800; color: var(--navy); }
+.brand-icon { font-size: 1.6rem; }
+nav { display: flex; gap: 24px; } nav a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: .95rem; }
+nav a:hover { color: var(--blue); }
+main { max-width: 1180px; margin: auto; padding: 48px 24px 64px; }
+.hero { display: grid; grid-template-columns: 1fr 1.05fr; align-items: center; gap: clamp(28px, 5vw, 72px); padding: 24px 0 58px; }
+.eyebrow { color: var(--teal); font-size: .76rem; letter-spacing: .15em; font-weight: 800; margin: 0 0 14px; }
+h1 { font-size: clamp(2.8rem, 5vw, 4.6rem); line-height: 1.03; letter-spacing: -.045em; color: var(--navy); margin: 0 0 20px; }
+h1 span { color: var(--blue); }
+.intro { max-width: 420px; color: var(--muted); font-size: 1.1rem; line-height: 1.7; }
+.booking-card { background: white; border-radius: 22px; padding: clamp(22px, 3vw, 34px); box-shadow: 0 18px 55px #173b5b12; border: 1px solid #e4edf4; }
+h2 { color: var(--navy); margin: 0 0 10px; font-size: 1.7rem; }
+.muted { color: var(--muted); line-height: 1.5; }
+.booking-card .muted { margin: 0 0 24px; }
+form { display: grid; gap: 18px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+label { display: grid; gap: 8px; font-weight: 700; font-size: .88rem; color: #334e68; }
+input, select { width: 100%; min-width: 0; border: 1px solid #d5e0e9; border-radius: 10px; padding: 13px 12px; color: var(--ink); background: white; font: inherit; outline: none; }
+input:focus, select:focus { border-color: var(--blue); box-shadow: 0 0 0 3px #1769aa18; }
+.primary-button, .book-button { border: 0; border-radius: 10px; padding: 14px 18px; background: var(--blue); color: white; font: inherit; font-weight: 800; cursor: pointer; transition: transform .15s, background .15s; }
+.primary-button:hover, .book-button:hover { background: #10548a; transform: translateY(-1px); }
+.demo-note { color: #7a8a9a; font-size: .78rem; margin: 16px 0 0; }
+.results-section { padding: 28px 0 52px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 22px; }
+.train-list { display: grid; gap: 14px; }
+.train-card { display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; background: white; border: 1px solid #e2eaf1; border-radius: 16px; padding: 22px; }
+.train-card h3 { margin: 0 0 8px; color: var(--navy); }
+.route { font-weight: 700; } .route span { color: var(--blue); padding: 0 8px; }
+.train-meta { color: var(--muted); font-size: .9rem; margin-top: 8px; }
+.fare { color: var(--navy); font-size: 1.25rem; font-weight: 800; margin-bottom: 10px; text-align: right; }
+.book-button { padding: 10px 14px; font-size: .88rem; }
+.features { padding: 42px 0 0; border-top: 1px solid #e0e8ef; }
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.feature { background: white; border: 1px solid #e2eaf1; border-radius: 16px; padding: 24px; }
+.feature > span { font-size: 1.8rem; } .feature h3 { color: var(--navy); margin: 16px 0 8px; } .feature p { color: var(--muted); line-height: 1.6; margin-bottom: 0; }
+footer { text-align: center; padding: 24px; color: #728397; background: white; font-size: .85rem; border-top: 1px solid #e2eaf1; }
+[hidden] { display: none !important; }
+@media (max-width: 780px) { .hero { grid-template-columns: 1fr; } main { padding-top: 28px; } .feature-grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .site-header { align-items: flex-start; gap: 14px; flex-direction: column; } nav { gap: 18px; } .field-row { grid-template-columns: 1fr; } .train-card { grid-template-columns: 1fr; } .fare { text-align: left; } .section-heading { align-items: flex-start; flex-direction: column; } }

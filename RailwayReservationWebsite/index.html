@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railway Reservation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><span class="brand-icon">🚆</span><span>RailConnect</span></div>
+    <nav><a href="#search">Search Trains</a><a href="#features">Features</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+        <h1>Travel farther.<br><span>Worry less.</span></h1>
+        <p class="intro">Find your next train journey with a simple, easy-to-use reservation demo.</p>
+      </div>
+
+      <section class="booking-card" id="search" aria-labelledby="booking-title">
+        <h2 id="booking-title">Find a train</h2>
+        <p class="muted">Enter your journey details below.</p>
+        <form id="searchForm">
+          <div class="field-row">
+            <label>From
+              <input id="from" name="from" placeholder="e.g. Pune" required>
+            </label>
+            <label>To
+              <input id="to" name="to" placeholder="e.g. Mumbai" required>
+            </label>
+          </div>
+          <div class="field-row">
+            <label>Journey date
+              <input id="date" name="date" type="date" required>
+            </label>
+            <label>Passengers
+              <select id="passengers" name="passengers">
+                <option value="1">1 passenger</option>
+                <option value="2">2 passengers</option>
+                <option value="3">3 passengers</option>
+                <option value="4">4 passengers</option>
+                <option value="5">5 passengers</option>
+                <option value="6">6 passengers</option>
+              </select>
+            </label>
+          </div>
+          <button type="submit" class="primary-button">Search trains</button>
+        </form>
+        <p class="demo-note">Demo only — no real tickets are booked.</p>
+      </section>
+    </section>
+
+    <section class="results-section" id="results" hidden>
+      <div class="section-heading">
+        <div><p class="eyebrow">YOUR OPTIONS</p><h2>Available demo trains</h2></div>
+        <p id="searchSummary" class="muted"></p>
+      </div>
+      <div id="trainList" class="train-list"></div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="section-heading"><div><p class="eyebrow">MADE FOR SIMPLE TRAVEL</p><h2>Everything in one place</h2></div></div>
+      <div class="feature-grid">
+        <article class="feature"><span>🔎</span><h3>Easy search</h3><p>Enter stations and a journey date in seconds.</p></article>
+        <article class="feature"><span>🗓️</span><h3>Plan ahead</h3><p>Choose a date and passenger count for your demo trip.</p></article>
+        <article class="feature"><span>🎫</span><h3>Sample booking</h3><p>Preview a demo booking confirmation without real payments.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>RailConnect · Student CI/CD project demo · Not an official railway booking service</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
